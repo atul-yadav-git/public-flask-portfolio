@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Contact Success - Tech with Atul</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- header.html-->
+    {% include 'header.html' %}
+    <div class="success-container">
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully. I will get back to you soon.</p>
+        <a href="/" class="home-link">Return to Home</a>
+    </div>
+
+
+    <!-- Include the footer -->
+    {% include 'footer.html' %}
+
+
+</body>
+
+</html>
+

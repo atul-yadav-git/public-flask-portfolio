@@ -1,0 +1,25 @@
+# Environment and credentials
+.env
+
+# Log files
+*.log
+*.log.*
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Private keys and certificates
+*.pem
+
+
+# Migrations (optional) flask-migrate managed for db
+migrations/
+
+
+# Backup files
+*backup*
+
+#db file
+*.db

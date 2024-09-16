@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Job Experience - Tech with Atul</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='experience.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- header.html-->
+{% include 'header.html' %}
+
+<main>
+    <h2>Job Experience</h2>
+
+    <!-- Job 1 -->
+    <div class="job">
+        <div class="job-header">
+            <h3 class="job-title">Software Developer</h3>
+            <h4 class="company-name">ABC Company</h4>
+            <div class="job-details">
+                <span class="location">Location: Melbourne, Australia</span>
+                <span class="date">Date: Jan 2020 - Present</span>
+            </div>
+        </div>
+        <div class="company-info">
+            <h4>About the Company</h4>
+            <p>This company is a leading provider of software solutions, specializing in enterprise applications.</p>
+        </div>
+        <div class="role-info">
+            <h4>My Role</h4>
+            <ul>
+                <li>Developed and maintained web applications using modern frameworks.</li>
+                <li>Collaborated with cross-functional teams to deliver software solutions.</li>
+                <li>Ensured code quality through continuous integration and testing.</li>
+                <li>Participated in code reviews and provided constructive feedback.</li>
+                <li>Mentored junior developers and led team projects.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Job 2 -->
+    <div class="job">
+        <div class="job-header">
+            <h3 class="job-title">Software Developer</h3>
+            <h4 class="company-name">XYZ Company</h4>
+            <div class="job-details">
+                <span class="location">Location: Sydney, Australia</span>
+                <span class="date">Date: Jan 2018 - Dec 2019</span>
+            </div>
+        </div>
+        <div class="company-info">
+            <h4>About the Company</h4>
+            <p>XYZ Company is known for its innovative solutions in the tech industry, providing cutting-edge software products.</p>
+        </div>
+        <div class="role-info">
+            <h4>My Role</h4>
+            <ul>
+                <li>Worked on developing backend services for client applications.</li>
+                <li>Implemented new features and optimized existing ones.</li>
+                <li>Collaborated closely with product managers to define project scope and objectives.</li>
+                <li>Integrated third-party APIs and developed internal RESTful APIs.</li>
+                <li>Contributed to improving team workflows and development practices.</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<!-- Include the footer -->
+{% include 'footer.html' %}
+
+</body>
+</html>
+

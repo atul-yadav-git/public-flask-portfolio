@@ -1,0 +1,102 @@
+/* Resume Page Styles */
+
+/* Main container styling */
+main {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #FFFFFF; /* White background for the main content area */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 80px; /* Add padding at the bottom of main content */
+}
+
+/* Resume-specific styles */
+h2 {
+  color: #333; /* Dark Gray for subheadings */
+  margin-bottom: 10px; /* Reduced margin for smaller screens */
+}
+
+p {
+  margin-bottom: 15px; /* Reduced margin for smaller screens */
+  line-height: 1.5;
+}
+
+/* Styling for download link */
+.download-link {
+  color: #007BFF; /* Blue color for the download link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+/* Resume container styling */
+.resume-container {
+  margin-top: 20px; /* Space between text and resume */
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: auto; /* Adjust height dynamically */
+  border: 1px solid #ddd; /* Border around the PDF */
+  overflow: hidden;
+  padding: 15px;
+ /* max-height: 90vh;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.resume-container img {
+  max-width: 100%; /* Make image width responsive */
+  max-height: 100%;
+  width: auto;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales without distortion */
+  display: block;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  main {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.8em; /* Adjust font size for subheadings */
+  }
+
+  p {
+    font-size: 1em; /* Adjust font size for paragraphs */
+  }
+
+  .resume-container {
+      height: auto; /* Adjust height dynamically */
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em; /* Further adjust font size for smaller screens */
+  }
+
+  p {
+    font-size: 0.9em; /* Further adjust font size for readability */
+  }
+
+  .resume-container {
+    height: auto; /* Adjust height dynamically */
+    padding: 5px;
+  }
+}

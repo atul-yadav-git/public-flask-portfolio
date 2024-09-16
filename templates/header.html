@@ -1,0 +1,20 @@
+<header class="header">
+    <h1 class="headline">Tech with Atul - DevOps</h1>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}" class="{% if request.path == url_for('home') %}active{% endif %}">Home</a></li>
+            <li><a href="{{ url_for('blogs') }}" class="{% if request.path == url_for('blogs') %}active{% endif %}">Blog</a></li>
+            <li><a href="{{ url_for('projects') }}" class="{% if request.path == url_for('projects') %}active{% endif %}">Projects</a></li>
+            <li><a href="{{ url_for('resume') }}" class="{% if request.path == url_for('resume') %}active{% endif %}">Resume</a></li>
+            <li><a href="{{ url_for('contact') }}" class="{% if request.path == url_for('contact') %}active{% endif %}">Contact</a></li>
+            <li><a href="{{ url_for('job_experience') }}" class="{% if request.path == url_for('job_experience') %}active{% endif %}">Experience</a></li>
+        </ul>
+        <!-- Include the refactored search form -->
+        {% include 'search_form.html' %}
+    </nav>
+</header>
+
+
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">

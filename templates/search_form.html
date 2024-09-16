@@ -1,0 +1,41 @@
+<!-- templates/search_form.html -->
+<!--
+Search Form Template
+
+Purpose:
+This file contains the HTML code for the search form used across multiple pages of the website.
+The search form allows users to select a search query from a dropdown menu and automatically
+submits the form when a selection is made. It is included in various pages (e.g., home, resume)
+to provide a consistent search experience.
+
+Features:
+- Dropdown menu for search queries.
+- Auto-submission of the form on selection change, triggered by JavaScript.
+- Integrated with the main navigation bar for consistent user interface.
+
+Usage:
+- This template is included in other HTML files where the search form is needed using Jinja's
+- Ensure that the JavaScript file `dropdown_auto_submit_search.js` is correctly linked in the main
+  HTML templates to handle the auto-submit functionality.
+
+Update Notes:
+- Any updates or changes to the search form should be made here to reflect across all pages
+  where this form is included.
+-->
+
+
+
+<form action="{{ url_for('search') }}" method="get" class="search-form">
+    <select name="query" id="search-query">
+        <option value="">Search...</option>
+        {% for keyword in keywords %}
+            <option value="{{ keyword }}">{{ keyword }}</option>
+        {% endfor %}
+    </select>
+</form>
+
+
+
+<!-- Include external JavaScript file for submit on change script -->
+<script src="{{ url_for('static', filename='dropdown_auto_submit_search.js') }}"></script>
+

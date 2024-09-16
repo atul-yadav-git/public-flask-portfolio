@@ -1,0 +1,120 @@
+/* Navigation Bar Styles */
+.main-nav {
+    display: flex;
+    background-color: transparent;/*#FFFFFF; /* White color */
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+   /* border-bottom: 2px solid #003366; /* Navy Blue border */
+   /* background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle brick texture */
+    background-size: cover;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/darkness.png');
+}
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0 10px;
+}
+
+.main-nav a {
+    color: #FFFFFF; /*#003366; /* Navy blue text */
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    /*font-weight: bold;*/
+}
+
+/*highlight active link*/
+.main-nav a.active {
+    background-color: #1E90FF; /*#FF6F61; /* Coral background for active link */
+    color: #FFFFFF; /* White text for active link */
+    font-weight: bold; /* Optional: make the text bold */
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+    background-color: #1E90FF;/*#FF6F61; /* Coral background on hover */
+    color: #FFFFFF; /* White text on hover */
+}
+
+/* Search Form Styles */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Space between search form and navigation links */
+}
+
+.search-form select {
+    padding: 6px 10px;
+   /* border: 1px solid #ccc;*/
+    border-radius: 4px;
+    font-size: 18px;
+    color: #333333; /* Dark Gray text color */
+    background-color: #FFFFFF; /* White background */
+    max-width: 300px; /* Adjust width to balance the search dropdown size */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+/* Responsive Design for Navigation */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column; /* Stack items vertically on mobile */
+       /* background-color: #003366; /* Navy Blue */
+	padding: 5px; /* Adjust padding for mobile view */
+        align-items: center; /* Center-align navigation items */
+    }
+
+    .main-nav ul {
+        flex-direction: row; /* Stack navigation items horizontally */
+        justify-content: center; /* Center items */
+        display: flex;
+	padding: 0;
+        margin: 0;
+    }
+
+    .main-nav li {
+        margin: 5px 0; /* Space between navigation items */
+        white-space: normal; /* Allow text to wrap */
+        text-align: center; /* Center-align text in navigation items */
+    }
+
+    .main-nav a {
+        color: #fff;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        display: inline-block; /* Ensure consistent height */
+        vertical-align: middle; /* Align text vertically in the middle */
+    }
+
+    .search-form {
+        margin-top: 5px; /* Add space above the search form */
+        /*background-color: #003366; /* Navy Blue background for search form */
+        padding: 5px;
+        width: calc(100% - 20px); /* Adjust width for mobile view */
+        border-radius: 4px;
+        justify-content: center; /* Center align the search form on mobile */
+    }
+
+    .search-form select {
+        background-color: #fff; /* Ensure the background is white */
+        color: #333; /* Set the text color */
+        width: calc(100% - 20px); /* Adjust width for mobile view */
+	font-size: 14px;
+    }
+
+}
+

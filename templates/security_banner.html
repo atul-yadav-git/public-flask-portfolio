@@ -1,0 +1,34 @@
+<div class="security-banner">
+    <h2>Your Connection Is Secured with Best Practices!</h2>
+
+    <div class="arrow left-arrow" id="prevSlide">&#9664;</div> <!-- Left Arrow -->
+
+    <div class="image-container active">
+        <img src="{{ url_for('static', filename='ssllabs_scan.png') }}" alt="SSL Labs Report">
+        <p class="caption">SSL Labs TLS Report</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='immuniweb_scan.png') }}" alt="ImmuniWeb Report">
+        <p class="caption">ImmuniWeb Report</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='mozilla_scan.png') }}" alt="Mozilla Observatory Report">
+        <p class="caption">MDN observatory HTTPD Report</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='immuniweb_scan.png') }}" alt="ImmuniWeb Report">
+        <p class="caption">ImmuniWeb Report</p>
+    </div>
+
+    <div class="arrow right-arrow" id="nextSlide">&#9654;</div> <!-- Right Arrow -->
+</div>
+
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='security_banner.css') }}">
+
+<!-- Link to external JS -->
+<script src="{{ url_for('static', filename='security_banner.js') }}"></script>
+

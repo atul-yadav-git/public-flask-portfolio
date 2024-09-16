@@ -1,0 +1,47 @@
+/* Header Styles */
+.header {
+    /*background-color: #003366; /* Navy Blue */
+    color: #FFFFFF; /* White text */
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text within the header */
+    position: relative;
+    z-index: 1000; /* Ensure header stays on top */
+    border-bottom: 4px solid #FF6F61; /* Coral accent border */
+    /* Adding a subtle geometric pattern */
+    /*background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Light texture */
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/darkness.png');
+    background-size: cover;
+}
+
+.headline {
+    margin: 0;
+    font-size: 40px; /* Increase the font size for the title */
+    color: #FFFFFF; /* White text */
+    line-height: 1.2;
+    text-align: center; /* Center the title */
+    font-weight: bold; /* Make title bold */
+   /* border-bottom: 4px solid #FF6F61; /* Coral accent border */
+    margin-bottom: 10px; /* Space between headline and content */
+}
+
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .headline {
+        font-size: 24px; /* Adjust font size for smaller screens */
+        margin-bottom: 10px; /* Space between headline and content *
+    }
+}
+
+
+/* Media Query for Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 15px 30px;
+    }

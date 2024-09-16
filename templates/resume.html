@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Resume - Tech with Atul</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resume.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- header.html-->
+    {% include 'header.html' %}
+
+    <main>
+        <h2>My Resume</h2>
+        <p>Below is my resume. You can view it directly on this page or <a href="{{ url_for('download_resume') }}" class="download-link" target="_blank">click here to download it</a>.</p>
+
+        <!-- Display Resume Image -->
+        <div class="resume-container">
+            <img src="{{ url_for('static', filename='Atul_Yadav_Resume_DevopsEngineer.jpg') }}" alt="Resume" width="100%">
+        </div>
+    </main>
+
+    <!-- Include the footer -->
+    {% include 'footer.html' %}
+</body>
+</html>

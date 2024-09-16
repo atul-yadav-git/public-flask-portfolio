@@ -1,0 +1,168 @@
+/* search-results.css */
+
+/* Main Container Styling */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Search Results Container */
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between each result */
+    padding: 20px;
+    background-color: #FFFFFF; /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog and Project Sections */
+.search-results h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #003366; /* Dark Blue for section headings */
+}
+
+/* Individual Result Styles */
+.search-result-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light gray background for each result */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effects */
+.search-result-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Title Styles */
+.search-result-title {
+    font-size: 20px;
+    color: #003366; /* Dark Blue */
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover Effect for Titles */
+.search-result-title:hover {
+    text-decoration: underline;
+}
+
+/* Description Styles */
+.search-result-description {
+    font-size: 16px;
+    color: #555555; /* Medium Gray */
+    line-height: 1.6;
+    margin-bottom: 10px; /* Space between description and other elements */
+}
+
+/* Blog Styles */
+.blog-results .search-result-item {
+    border-left: 5px solid #007BFF; /* Blue accent for blog items */
+    background-color: #e9f5ff; /* Light Blue background for blog items */
+}
+
+/* Project Styles */
+.project-results .search-result-item {
+    border-left: 5px solid #007BFF; /* Blue accent for project items */
+    background-color: #f2f4f5; /* Light gray background for project items */
+}
+
+/* Distinguish Individual Blog Items */
+.blog-results .search-result-item:nth-child(odd) {
+    background-color: #d9eaf7; /* Slightly darker Blue for odd blog items */
+}
+
+.blog-results .search-result-item:nth-child(even) {
+    background-color: #e9f5ff; /* Lighter Blue for even blog items */
+}
+
+/* Distinguish Individual Project Items */
+.project-results .search-result-item:nth-child(1) {
+    border-left-color: #003366; /* Darker Blue for the first item */
+}
+
+.project-results .search-result-item:nth-child(2) {
+    border-left-color: #3399FF; /* Medium Blue for the second item */
+}
+
+.project-results .search-result-item:nth-child(3) {
+    border-left-color: #66B2FF; /* Light Blue for the third item */
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between Previous and Next links */
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.pagination a:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+    border-color: #007bff; /* Border color on hover */
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Tablet and small desktop screens */
+@media (max-width: 768px) {
+    .search-results {
+        padding: 10px;
+    }
+
+    .search-result-item {
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .search-result-title {
+        font-size: 18px;
+    }
+
+    .search-result-description {
+        font-size: 14px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .search-results {
+        padding: 5px;
+    }
+
+    .search-result-item {
+        padding: 8px;
+    }
+
+    .search-result-title {
+        font-size: 16px;
+    }
+
+    .search-result-description {
+        font-size: 12px;
+    }
+
+    .pagination a {
+        font-size: 14px; /* Adjust pagination font size */
+    }
+}
+
+

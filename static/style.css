@@ -1,0 +1,48 @@
+/* style.css */
+
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Basic Reset */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora:wght@400&display=swap');
+*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Poppins:wght@600&display=swap');
+*/
+
+/* General Styles */
+body {
+    /*font-family: 'Lora', serif;*/
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: Arial, sans-serif;*/
+    /*background: url('https://www.toptal.com/designers/subtlepatterns/uploads/paisley.png') repeat; /* Paisley pattern applied */
+    color: #333333; /* Text color */
+    /*background: url('https://www.toptal.com/designers/subtlepatterns/uploads/darkness.png') repeat;*/
+    /*background-image: url('../static/stardust_background.png');
+    background-repeat: repeat;*/
+}
+
+
+/* Apply Poppins to headings */
+/*
+h1, h2, h3, .headline {
+    font-family: 'Poppins', sans-serif;
+}
+*/
+/* Main Content Styles */
+main {
+    background: #FFFFFF; /* Solid background for main content area */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+

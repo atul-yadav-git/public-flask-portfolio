@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Internal Server Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='500.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">500</div>
+        <div class="error-message">Oops! Something went wrong on our end.</div>
+        <a class="back-link" href="{{ url_for('home') }}">Go to Homepage</a>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Blogs - Tech with Atul</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='blogs.css') }}">
+</head>
+<body>
+
+    <!-- header.html-->
+    {% include 'header.html' %}
+
+    <main>
+	    <h2>Blogs</h2>
+        {% for post in posts.items %}
+            <article>
+                <h2>{{ post.title }}</h2>
+		<p class="summary">{{ post.summary }}</p>
+                <div class="content">{{ post.content | safe }}</div>
+            </article>
+        {% endfor %}
+        <div class="pagination">
+            {% if posts.has_prev %}
+                <a href="{{ url_for('blogs', page=posts.prev_num) }}">Previous</a>
+            {% endif %}
+            {% if posts.has_next %}
+                <a href="{{ url_for('blogs', page=posts.next_num) }}">Next</a>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Include the footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>
+

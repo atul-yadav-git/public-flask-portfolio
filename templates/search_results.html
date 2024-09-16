@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Search Results - Tech with Atul</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='search_results.css') }}">
+</head>
+<body>
+   
+    <!-- Include the header -->
+        {% include 'header.html' %}
+
+    <!-- Main Content -->
+    <main>
+        <h2>Search Results for "{{ query }}"</h2>
+
+        {% if posts.items or projects.items %}
+            <!-- Blog Posts Section -->
+            {% if posts.items %}
+                <section class="search-results blog-results">
+                    <h3>Blog Posts:</h3>
+                    {% for post in posts.items %}
+                        <div class="search-result-item blog-result">
+                            <h2 class="search-result-title">
+                                <a href="{{ url_for('blogs', post_id=post.id) }}">{{ post.title }}</a>
+                            </h2>
+                            <p class="search-result-description">{{ post.summary }}</p>
+                        </div>
+                    {% endfor %}
+
+                    <!-- Pagination for Blog Posts -->
+                    <div class="pagination">
+                        {% if posts.has_prev %}
+                            <a href="{{ url_for('search', query=query, posts_page=posts.prev_num) }}">Previous</a>
+                        {% endif %}
+                        {% if posts.has_next %}
+                            <a href="{{ url_for('search', query=query, posts_page=posts.next_num) }}">Next</a>
+                        {% endif %}
+                    </div>
+                </section>
+            {% endif %}
+
+            <!-- Projects Section -->
+            {% if projects.items %}
+                <section class="search-results project-results">
+                    <h3>Projects:</h3>
+                    {% for project in projects.items %}
+                        <div class="search-result-item project-result">
+                            <h2 class="search-result-title">
+                                <a href="{{ url_for('projects', project_id=project.id) }}">{{ project.title }}</a>
+                            </h2>
+                            <p class="search-result-description">{{ project.summary }}</p>
+                        </div>
+                    {% endfor %}
+
+                    <!-- Pagination for Projects -->
+                    <div class="pagination">
+                        {% if projects.has_prev %}
+                            <a href="{{ url_for('search', query=query, projects_page=projects.prev_num) }}">Previous</a>
+                        {% endif %}
+                        {% if projects.has_next %}
+                            <a href="{{ url_for('search', query=query, projects_page=projects.next_num) }}">Next</a>
+                        {% endif %}
+                    </div>
+                </section>
+            {% endif %}
+        {% else %}
+            <p>No results found for "{{ query }}".</p>
+        {% endif %}
+    </main>
+
+    <!-- Include the footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>
+

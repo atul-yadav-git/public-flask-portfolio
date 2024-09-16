@@ -1,0 +1,217 @@
+/* contact.css */
+
+/* Contact Form Styles */
+.contact-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto; /* Center the form and add margin for breathing room */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+    text-align: center; /* Center-align content inside the container */
+}
+
+.contact-header {
+    font-size: 2em; /* Make header more distinguishable */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between header and contact info */
+    color: #003366; /* Navy Blue */
+    border-bottom: 2px solid #003366; /* Underline for emphasis */
+    padding-bottom: 10px; /* Padding for better spacing */
+}
+
+.contact-info {
+    margin-bottom: 20px; /* Space between contact info and form */
+    text-align: left; /* Align contact info to the left */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    border: 1px solid #ddd; /* Light border to separate the info section */
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Add vertical spacing between contact info items */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+.separator {
+    border: none;
+    border-top: 2px solid #003366; /* Navy Blue border for separation */
+    margin: 20px 0; /* Margin to add space above and below */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px; /* Increased margin for spacing below label */
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center align vertically */
+    font-size: 1rem; /* Consistent font size */
+}
+
+label .required {
+    color: red;
+    margin-left: 5px; /* Add space between label text and the red asterisk */
+    font-size: 1.2em; /* Slightly larger for emphasis */
+}
+
+.helper-text {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 10px; /* Added margin to separate from the next element */
+    display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding does not affect width */
+    margin-bottom: 15px; /* Adds spacing between form elements */
+    display: block; /* Ensures inputs take up full width in block format */
+    margin-left: auto; /* Centers the input fields */
+    margin-right: auto; /* Centers the input fields */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.errors, .flashes {
+    color: #FF6F61; /* Coral */
+    font-size: 0.9em;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 10px; /* Added margin to separate from the next element */
+}
+
+.flashes {
+    font-size: 1em;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border: 1px solid #FF6F61; /* Coral border */
+    margin-bottom: 15px;
+    border-radius: 4px; /* Rounded corners for better aesthetics */
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #003366; /* Navy Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 200px; /* Constrain width on larger screens */
+    margin: 20px auto 0; /* Center the button and add top margin */
+    display: block; /* Ensures the button centers properly */
+}
+
+button[type="submit"]:hover {
+    background-color: #002244; /* Darker Navy Blue */
+}
+
+/* Success Page Styles */
+.success-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.success-container h1 {
+    color: #28a745; /* Success Green */
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .contact-header {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+    }
+
+    .contact-info {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact-header {
+        font-size: 1.8em;
+        margin-bottom: 18px;
+        padding-bottom: 8px;
+    }
+
+    .contact-info {
+        font-size: 1.05em;
+        padding: 12px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    button[type="submit"] {
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .contact-header {
+        font-size: 2em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .contact-info {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

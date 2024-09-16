@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <title>Tech with Atul - DevOps</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='security_banner.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- header.html-->
+    {% include 'header.html' %}
+
+    <div class="main-container">
+        <div class="profile-container">
+            <img src="{{ url_for('static', filename='atul_profile.jpg') }}" alt="Profile Picture">
+        </div>
+        <div class="info-container">
+            <h2>Atul Yadav</h2>
+	    <h3>DevOps Engineer | Cloud Enthusiast | CI/CD Advocate</h3>
+            <p>Passionate about keeping systems running smoothly while embracing new tech trends. Ensuring innovation without disruption!</p>
+            <p><strong>Education:</strong> Bachelor of Engineering (Telecommunications), University of Mumbai, India</p>
+	    <p><strong>Email:</strong> atulgyadav@gmail.com</p>
+	    <p><strong>Location:</strong> Melbourne, Victoria, Australia</p>
+	    <p class="tagline">Your resident tech whisperer; adept at product support, troubleshooting, and cloud setup.</p>
+	    <div class="links-container">
+                <a href="https://www.linkedin.com/in/atul-g-yadav/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/atul-yadav-git" target="_blank">GitHub</a>
+                <a href="{{ url_for('contact') }}">Contact Me</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include the security banner -->
+    {% include 'security_banner.html' %}
+
+    <section class="summary">
+        <div class="devops-tools">
+            <h3>DevOps Tools</h3>
+            <div class="tool">
+                <h4>Docker</h4>
+                <p>Containerization platform that automates deployment.</p>
+            </div>
+            <div class="tool">
+                <h4>Networking</h4>
+                <p>Understanding of network protocols and cloud networking.</p>
+            </div>
+            <div class="tool">
+                <h4>Cloud</h4>
+                <p>Experience with AWS and Azure.</p>
+            </div>
+            <div class="tool">
+                <h4>Linux</h4>
+                <p>Proficiency in Linux systems and scripting.</p>
+            </div>
+        </div>
+	<div class="power-skills">
+            <h3>Power Skills</h3>
+            <div class="skill">
+                <h4>Communication</h4>
+                <p>Effective verbal and written communication skills.</p>
+            </div>
+            <div class="skill">
+                <h4>Multi-team Working</h4>
+                <p>Experience collaborating with cross-functional teams.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+/* Footer Styles */
+.footer {
+   /* background-color: #003366; /* Navy Blue to match header */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text within the footer */
+    border-top: 4px solid #FF6F61; /* Coral accent border to match header */
+    position: relative;
+    z-index: 1000; /* Ensure footer is layered correctly */
+    width: 100%;
+    bottom: 0; /* Ensure footer stays at the bottom of the page */
+    /*background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle floral texture */
+    background-size: cover;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/darkness.png');
+
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #1E90FF; /* blue accent for links */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer a:hover {
+    color: #FFFFFF; /* Change link color on hover */
+}
+
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .footer a {
+        margin: 5px; /* Reduce margin between links */
+    }
+}
+
+/* Media Query for Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        padding: 20px 30px;
+    }
+}
+

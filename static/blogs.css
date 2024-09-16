@@ -1,0 +1,97 @@
+/* blogs.css */
+
+/* Header styling - using standard style.css for across pages */
+
+/* Main container styling */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+article {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-top: 10px;
+}
+
+/* Pagination styling */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 5px;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Tablet and small desktop screens */
+@media (max-width: 768px) {
+    .main-nav ul {
+        text-align: center;
+        padding: 0;
+        list-style-type: none; /* Remove bullet points */
+    }
+
+    .main-nav li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 10px;
+        font-size: 1.1em; /* Increase font size for better readability */
+    }
+    .main-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    article {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 1em; /* Adjust font size for readability */
+    }
+
+    .pagination a {
+        font-size: 0.9em; /* Adjust pagination font size */
+    }
+}
+
