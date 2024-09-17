@@ -1,0 +1,16 @@
+Flask
+flask-sqlalchemy
+flask-admin
+flask-login
+flask-wtf
+email_validator
+python-dotenv
+Flask-Migrate
+flask-mail
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+oauthlib
+requests_oauthlib
+bandit
+flake8
