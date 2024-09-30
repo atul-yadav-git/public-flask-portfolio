@@ -1,0 +1,28 @@
+#version: '3.8'  # You can adjust this version based on your needs
+
+services:
+  flask-app-gunicorn-sqllitedb:
+    image: atuldockerhub/flask-app-container:app
+    container_name: my_flask_app
+    env_file: .env  # Load environment variables from .env file
+    volumes:
+      - ./career_page.db:/app/career_page.db
+    networks:
+      - my-custom-network
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  nginx:
+    image: atuldockerhub/flask-app-container:webserver
+    container_name: my-nginx-container
+    ports:
+      - "443:443"
+    networks:
+      - my-custom-network
+    restart: unless-stopped
+
+networks:
+  my-custom-network:
+    driver: bridge
+

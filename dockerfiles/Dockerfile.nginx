@@ -1,0 +1,22 @@
+########################################################
+#this docker file is for nginx setup with ssl cert configured on custom nginx.conf of letsencrypt
+######################################################################################
+
+
+# Use the specific version of Nginx from the Docker Hub
+FROM nginx:1.24.0
+
+# Set the working directory 
+WORKDIR /etc/nginx
+
+# Copy your custom Nginx configuration file ; paths is realtive to build context directory
+COPY server_configurations/career_page_flask.conf /etc/nginx/conf.d/career_page_flask_nginx.conf
+
+
+# Expose HTTPS port for nginx 
+EXPOSE 443
+
+
+# Start Nginx as foreground process, cmd specifies command to run when container starts; daemon off is for not as background process
+CMD ["nginx", "-g", "daemon off;"]
+

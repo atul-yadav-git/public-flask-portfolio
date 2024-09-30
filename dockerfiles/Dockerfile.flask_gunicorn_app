@@ -1,0 +1,28 @@
+#This docker file is for flask app running using gunicorn and sqllite db setup
+
+
+# Use the official Python image from the Docker Hub
+FROM python:3.9-slim
+
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file into the container; the path is relative to build context
+COPY requirements.txt .
+
+
+# Install the required packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application code into the container; first . is for entire build context directory and another . is to get same in conatiner directory
+COPY . .
+
+# Expose the port the app runs on (gunicorn listens on this port im usig default only)
+EXPOSE 8000
+
+
+# Command to run the application using Gunicorn with the config file
+CMD ["gunicorn", "-c", "gunicorn_config.py", "wsgi:app"]
+
+
