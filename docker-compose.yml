@@ -2,11 +2,11 @@
 
 services:
   flask-app-gunicorn-sqllitedb:
-    image: atuldockerhub/flask-app-container:app
+    image: atuldockerhub/flask-app-container:flask-gunicorn-sqllite #this is private dockerhub repo
     container_name: my_flask_app
-    env_file: .env  # Load environment variables from .env file
+    env_file: ./flask_gunicorn_app/.env  # Load environment variables from .env file
     volumes:
-      - ./career_page.db:/app/career_page.db
+      - ./flask_gunicorn_app/career_page.db:/app/career_page.db
     networks:
       - my-custom-network
     ports:
@@ -14,7 +14,7 @@ services:
     restart: unless-stopped
 
   nginx:
-    image: atuldockerhub/flask-app-container:webserver
+    image: atuldockerhub/flask-app-container:nginx
     container_name: my-nginx-container
     ports:
       - "443:443"
